@@ -1,0 +1,60 @@
+<h2 class="text-center">
+  Todo App
+</h2>
+<div class="col-md-8 offset-md-2">
+  <form (ngSubmit) = "onSubmit()" [formGroup]="contact">
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail">Email address</label>
+      <input type="email" class="form-control"  placeholder="Enter email" formControlName = "email">
+
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="exampleInputPassword">Password</label>
+      <input type="password" class="form-control"  placeholder="Password" formControlName = "password">
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputAge">Age</label>
+      <input type="number" class="form-control"  placeholder="Age" formControlName = "age">
+
+    </div>
+
+
+    <div class="form-group">
+      <label for="inputState">Country</label>
+      <select id="inputState" class="form-control" formControlName = "country">
+        <option selected>Country</option>
+        <option>Viet Nam</option>
+        <option>England</option>
+        <option>Holland</option>
+        <option>Portugal</option>
+      </select>
+    </div>
+
+
+
+    <div class="form-group" >
+      <div>
+        <label>Gender</label>
+      </div>
+      <input class="form-check-input" type="radio"    value ="male" formControlName = "gender">
+      <label class="form-check-label" for="inlineCheckbox1"  >Male</label>
+
+      <input class="form-check-input" type="radio"   value ="female" formControlName = "gender">
+      <label class="form-check-label" for="inlineCheckbox2" >Female</label>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPhoneNumber">Phone Number</label>
+      <input type="text" class="form-control"  placeholder="Phone Number" formControlName = "phone">
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="contact.invalid" >Submit</button>
+  </form>
+</div>
